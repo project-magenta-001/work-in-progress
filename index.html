@@ -1,136 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>CSS Template</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0px;
-}
-/* Navbar Styling based off of w3schools */
-.navbar {
-  overflow: hidden; /* hide any overflowing bits */
-  background-color: #333; /* bg colour */
-  position: fixed; /* enables scrolling */
-  top: 0; /*positioned at the top */
-  width: 100%; /* as wide as the page is displayed */
-}
-.navbar a { /* for links on navbar */
-  float: left; /* float to left when multiple */
-  display: block; /* display as blocks */
-  color: #f2f2f2; /* link colours */
-  text-align: center;
-  padding: 14px 16px; /* text padding */
-  text-decoration: none;
-  font-size: 17px;
-}
-.navbar a:hover { /* mouseover options for navbar links */
-  background: #ddd; /* colour to change into */
-  color: black; /* font colour */
-}
-/* Main content styling for content overflow countermeasure+testing */
-.main {
-  padding: 10px; /* Content Padding */
-  margin-top: 20px; /* Margin added in order to prevent blocking content */
-  margin-bottom: 50px;
-}
-  
-/* Style the header */
-.header {
-  background-color: #777;
-  padding: 50px;
-  text-align: center;
-  font-size: 33px;
-  color: magenta;
-}
-/* Create two columns/boxes that floats next to each other */
-nav {
-  float: right;
-  width: 30%;
-  height: 300px; /* only for demonstration, should be removed */
-  background: #ccc;
-  padding: 20px;
-}
-/* Style the list inside the menu */
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-article {
-  float: left;
-  padding: 20px;
-  width: 70%;
-  background-color: #f1f1f1;
-  height: 300px; /* only for demonstration, should be removed */
-}
-/* Clear floats after the columns */
-section:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/* Style the footer */
-.footer {
-  background-color: #333;
-  padding: 15px;
-  text-align: center;
-  color: magenta;
-  bottom: 0;
-  width: 100%;
-}
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-  }
-}
-</style>
-</head>
-  
-/* BEGGINING OF BODY */  
-<body>
-<div class="navbar">
-  <a href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-</div>
+	<head>
+		<title>CSS Template</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+				margin: 0px;
+			}
+			/* Navbar Styling based off of w3schools */
+			.navbar {
+				overflow: hidden; /* hide any overflowing bits */
+				background-color: #333; /* bg colour */
+				position: fixed; /* enables scrolling */
+				top: 0; /*positioned at the top */
+				width: 100%; /* as wide as the page is displayed */
+			}
+			.navbar a { /* for links on navbar */
+				float: left; /* float to left when multiple */
+				display: block; /* display as blocks */
+				color: #f2f2f2; /* link colours */
+				text-align: center;
+				padding: 14px 16px; /* text padding */
+				text-decoration: none;
+				font-size: 17px;
+			}
+			.navbar a:hover { /* mouseover options for navbar links */
+				background: #ddd; /* colour to change into */
+				color: black; /* font colour */
+			}
 
-<div class="header">
-  <h2>Project</h2>
-  <h2>Magenta</h2>
-</div>
-<div class="main">
-  <section>
-    <nav>
-      <ul>
-        <li><a href="#">Postbox</a></li>
-        <li><a href="#">Purpose</a></li>
-        <li><a href="#">Symbol and Promise</a></li>
-      </ul>
-    </nav>
+			/* Background Formatting */
+			.background-first {
+				background: #609;
+				padding: 30px;
+			}
 
-    <article>
-      <h1>Postbox</h1>
-      <h1>Purpose</h1>
-      <p>Project Magenta is initiated in hopes of 1) Changing Perceptions, 2) Creating Solutions and 3) Getting involved.</p>
-      <blockquote cite="http://madebydyslexia.org/">
-  *w/ Neurodiversity. Enhancing the holistic research on and strengthening the socio-cultural understanding and acceptance about Asperger's Syndrome, Dyslexia, ADHD, etc.</blockquote>
-      <p>*w/Minsung Kang, Yujin Jo, Junyoung Lee.<p>
-      <h1>Symbol and Promise</h1>
-      <p>Magenta symbolises ... </p>
-    </article>
-  </section>
-</div>
+			.background-second {
+				background: #090;
+				padding: 30px;
+			}
 
-<div class="footer">
-	<p> Footer </p>
-</div>
-  
-</body>
+			/* Main content styling for content overflow countermeasure+testing */
+			.main {
+				padding: 10px; /* Content Padding */
+				margin-bottom: 0px;
+			}
+
+			/* Style the header */
+			.header {
+				background-color: #777;
+				padding: 3px;
+				text-align: center;
+				font-size: 33px;
+				margin-top: 48px; /* Margin added in order to prevent blocking content */
+				color: magenta;
+			}
+			/* Create two columns/boxes that floats next to each other */
+			nav {
+				float: right;
+				width: 30%;
+				height: 300px; /* only for demonstration, should be removed */
+				background: #ccc;
+				padding: 20px;
+			}
+			/* Style the list inside the menu */
+			nav ul {
+				list-style-type: none;
+				padding: 0;
+			}
+			.article {
+				float: left;
+				padding: 20px;
+				width: 70%;
+				background-color: #f1f1f1;
+			}
+			/* Clear floats after the columns */
+			section:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+			/* Style the footer */
+			.footer {
+				background-color: #333;
+				padding: 15px;
+				text-align: center;
+				color: magenta;
+				bottom: 0;
+				width: 100%;
+			}
+			/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+			@media (max-width: 600px) {
+				nav, article {
+					width: 100%;
+					height: auto;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="navbar">
+			<a href="#home">Home</a>
+			<a href="#news">News</a>
+			<a href="#contact">Contact</a>
+		</div>
+
+		<div class="header">
+			<h2>Project</h2>
+			<h2>Magenta</h2>
+		</div>
+
+		<div class="background-first">
+			<div class="main">
+				<section>
+					<nav>
+						<ul>
+							<li><a href="#">Postbox</a></li>
+							<li><a href="#">Purpose</a></li>
+							<li><a href="#">Symbol and Promise</a></li>
+						</ul>
+					</nav>
+					<div class="article">
+						<h1>Postbox</h1>
+						<h1>Purpose</h1>
+						<p>Project Magenta is initiated in hopes of 1) Changing Perceptions, 2) Creating Solutions and 3) Getting involved.</p>
+						<blockquote cite="http://madebydyslexia.org/">
+						*w/ Neurodiversity. Enhancing the holistic research on and strengthening the socio-cultural understanding and acceptance about Asperger's Syndrome, Dyslexia, ADHD, etc.</blockquote>
+						<p>*w/Minsung Kang, Yujin Jo, Junyoung Lee.<p>
+						<h1>Symbol and Promise</h1>
+						<p>Magenta symbolises ... </p>
+					</div> <!--article-->
+				</section>
+			</div>
+		</div>
+
+		<div class="background-second">
+			<div class="main">
+				<section>
+					<nav>
+						<ul>
+							<li><a href="#">Postbox</a></li>
+							<li><a href="#">Purpose</a></li>
+							<li><a href="#">Symbol and Promise</a></li>
+						</ul>
+					</nav>
+					<div class="article">
+						<h1>Postbox</h1>
+						<h1>Purpose</h1>
+						<p>Project Magenta is initiated in hopes of 1) Changing Perceptions, 2) Creating Solutions and 3) Getting involved.</p>
+						<blockquote cite="http://madebydyslexia.org/">
+						*w/ Neurodiversity. Enhancing the holistic research on and strengthening the socio-cultural understanding and acceptance about Asperger's Syndrome, Dyslexia, ADHD, etc.</blockquote>
+						<p>*w/Minsung Kang, Yujin Jo, Junyoung Lee.<p>
+						<h1>Symbol and Promise</h1>
+						<p>Magenta symbolises ... </p>
+					</div> <!--article-->
+				</section>
+			</div>
+		</div>
+
+		<div class="footer">
+			<p> Footer </p>
+		</div>
+		
+	</body>
 </html>
