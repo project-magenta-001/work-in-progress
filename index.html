@@ -8,16 +8,23 @@
 			* {
 				box-sizing: border-box;
 			}
+			
+			/* Set scroll behaviour as smooth */
+			html {
+				scroll-behavior: smooth;
+			}
+			
 			body {
 				font-family: Arial, Helvetica, sans-serif;
 				margin: 0px;
 				background-color: #f1f1f1;
+				padding-top: 20px;
 			}
 			
 			/* Horizontal line styling */
 			hr {
 				border: 2px solid #777;
-				width: 95%
+				width: 110%;
 			}
 			
 			/* Navbar Styling based off of w3schools */
@@ -43,19 +50,25 @@
 			}
 
 			/* Background Formatting */
-			.background-first {
+			.background-gray {
 				background: #f1f1f1;
 				padding: 0px;
 				width: auto;
 				max-width: 900px;
 				margin: auto;
 			}
-
-			.background-second {
-				background: #f1f1f1;
-				padding: 10px;
+			
+			.background-gray::before { 
+				display: block; 
+				content: ""; 
+				padding-top: 30px;
+				pointer-events: none;
+				border: 0;
+				border-bottom: 2px solid #777;
+				width: 110%;
+				
 			}
-
+			
 			/* Main content styling for content overflow countermeasure+testing */
 			.main {
 				padding: 10px; /* Content Padding */
@@ -92,14 +105,25 @@
 				bottom: 0;
 				width: 100%;
 			}
+			
+			.footer a { /* for links on footer */
+				display: inline-block; /* display as blocks */
+				color: #f2f2f2; /* link colours */
+				text-align: center;
+				padding: 14px 16px; /* text padding */
+				text-decoration: none;
+				font-size: 17px;
+			}
 		</style>
 	</head>
 
 	<body>
 		<div class="navbar">
-			<a href="#home">Home</a>
-			<a href="#news">News</a>
-			<a href="#contact">Contact</a>
+			<a href="#postbox">ScrollTo1</a>
+			<a href="#whoweare">ScrollTo2</a>
+			<a href="#cards">ScrollTo3</a>
+			<a href="#thanks">ScrollTo4</a>
+			<a href="#contacts">ScrollTo5</a>
 		</div>
 
 		<div class="header">
@@ -110,47 +134,97 @@
 		
 		
 		
-		<div class="background-first">
+		<div class="background-gray" id="postbox">
 			<div class="main">
 				<section>
 					<div class="article">
 						<h1>Postbox</h1>
-						<h1>Purpose</h1>
-						<p>Project Magenta is initiated in hopes of 1) Changing Perceptions, 2) Creating Solutions and 3) Getting involved.</p>
-						<blockquote cite="http://madebydyslexia.org/">
-						*w/ Neurodiversity. Enhancing the holistic research on and strengthening the socio-cultural understanding and acceptance about Asperger's Syndrome, Dyslexia, ADHD, etc.</blockquote>
-						<p>*w/Minsung Kang, Yujin Jo, Junyoung Lee.<p>
-						<h1>Symbol and Promise</h1>
-						<p>Magenta symbolises ... </p>
+						<p>
+							우체통 기능 및 디자인 (빅 사이즈)
+							메세지 박스 (유저가 우체통 안에 넣을 내용)
+							메세지 가이드 (신경다양성과 관련하여, 사람들이 쉽게 간과하거나 중요치 생각하지 않거나 스쳐 지나가는 grey area 에 대한 통찰적이고 다이렉트한 질문, 혹은 프롬트들 간단히 나열/배치) e.g. “How do you think the idea of neurodiversity affect your life as a learner?”
+							//더 디테일한 부분은 ㅍㅁㅈㅌ 다른 소셜계정(인스타, 페이스북 등)을 통해 규칙적/주기적으로 업로드하는  걸로 engaging한 방향으로 생각 중입니다. 그래서 이와 톱니바퀴가 맞게, 일단 홈페이지는 말그대로 virtually-analogue postbox 역할을 하는 방향으로 생각하고 있습니다.
+						</p>
+						<p>
+						What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						</p>
 					</div> <!--article-->
-					
 					
 				</section>
 			</div>
-			<hr>
 		</div>
+		
 	
-		<div class="background-first">
+		<div class="background-gray" id="whoweare">
 			<div class="main">
 				<section>
 					<div class="article">
-						<h1>Postbox</h1>
-						<h1>Purpose</h1>
-						<p>Project Magenta is initiated in hopes of 1) Changing Perceptions, 2) Creating Solutions and 3) Getting involved.</p>
-						<blockquote cite="http://madebydyslexia.org/">
-						*w/ Neurodiversity. Enhancing the holistic research on and strengthening the socio-cultural understanding and acceptance about Asperger's Syndrome, Dyslexia, ADHD, etc.</blockquote>
-						<p>*w/Minsung Kang, Yujin Jo, Junyoung Lee.<p>
-						<h1>Symbol and Promise</h1>
-						<p>Magenta symbolises ... </p>
+						<h1>Who We Are</h1>
+						<p>
+							세로 컬럼 3개로 나눠 배치.
+							Changing perspectives
+							Creating solutions
+							Empowering each other
+						</p>
+						<p>
+						What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						</p>
+						
+					</div> <!--article-->
+				</section>
+				
+			</div>
+			
+		</div>
+		
+		<div class="background-gray" id="cards">
+			<div class="main">
+				<section>
+					<div class="article">
+						<h1>Trading Cards</h1>
+						<p>
+							초능력, 능력치 나와 있는 카드 (역사적 인물, 신경다양성에 속하는 그 누구든, which means ‘everyone’, really.)
+							각 줄당 3개씩 그 개인과 관련 evidence가 나와있는 연구 결과 혹은 아티클 연결(하이퍼링크 처리된 웹주소), 나열.
+						</p>
+						<p>
+						What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						</p>
+						
+					</div> <!--article-->
+								
+					
+				</section>
+			</div>
+
+		</div>
+		
+		<div class="background-gray" id="thanks">
+			<div class="main">
+				<section>
+					<div class="article">
+						<h1>Special Thanks</h1>
+						<p>
+							For more than 10 years, members of Project Magenta got support from these individuals and organizations both directly and indirectly:
+							각 줄당 3개씩 그 개인 혹은 단체 로고와 웹페이지 주소랑 이름 나열.
+						</p>
+						<p>
+						What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						</p>
 					</div> <!--article-->
 					
 					
 				</section>
 			</div>
-		</div>
+		</div>		
 
-		<div class="footer">
-			<p> Footer </p>
+		<div class="footer" id="contacts">
+			<a href="#home">Contact1</a>
+			<a href="#news">Contact2</a>
+			<a href="#contact">Contact3</a>
 		</div>
 		
 	</body>
